@@ -9,8 +9,8 @@ def home_page():
 @app.route('/about/<username>')
 def about_page(username):
     if username == "Abhishek":
-        return render_template()
-    return f'<h1>This is about page of {username}</h1>'
+        return render_template('AdminPage.html',username = username)
+    return render_template('home.html')
 
 @app.route('/market')
 def market_page():
